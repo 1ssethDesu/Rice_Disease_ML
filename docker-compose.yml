@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    image: rice-disease-api:latest
+    container_name: rice-disease-api
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8001
+      - DEBUG=false
+      - USE_ONNX=true
+    ports:
+      - "8001:8001"
+    # For development, you can mount the code to enable live changes
+    # volumes:
+    #   - ./ML_api:/app/ML_api
+    restart: unless-stopped

@@ -22,7 +22,7 @@ class Config:
     
     # Model Configuration
     MODEL_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'model', 'InceptionV3_Model.h5')
-    ONNX_MODEL_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'model', 'rice_disease_model.onnx')
+    ONNX_MODEL_PATH = os.path.join(os.path.dirname(__file__), 'model', 'rice_disease_model.onnx')
     USE_ONNX = os.getenv("USE_ONNX", "true").lower() == "true"  # Default to ONNX now that it's available
     TARGET_IMAGE_SIZE: Tuple[int, int] = (299, 299)
     

@@ -187,6 +187,7 @@ demo_images/
 !requirements.txt
 !README.md
 !disease_details.csv
+!rice_disease_api.postman_collection.json
 
 # ========================================
 # DEVELOPMENT & IDE FILES
@@ -299,3 +300,8 @@ celerybeat.pid
 !*.cfg
 !*.ini
 
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes

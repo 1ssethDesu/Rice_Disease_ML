@@ -1,0 +1,85 @@
+{
+  "info": {
+    "name": "Rice Disease Classification API",
+    "description": "Postman collection for the Rice Disease Classification FastAPI service.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Diseases",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/diseases",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "diseases"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Predict",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "accept", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": [
+                "/Volumes/My SSD/Desktop/Rice_Disease_ML/ML_api/img_tests/Rice_Diseases/Brown Spot Disease/BS (1).jpg"
+              ]
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/predict",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "predict"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8001",
+      "type": "string"
+    }
+  ]
+}
